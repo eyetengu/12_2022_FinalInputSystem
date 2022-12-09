@@ -1,0 +1,202 @@
+{
+    "name": "CoreProject_Inputs",
+    "maps": [
+        {
+            "name": "Interactions",
+            "id": "5c275fed-651c-49fb-9d94-7fe91fa6d09b",
+            "actions": [
+                {
+                    "name": "Interaction Key",
+                    "type": "Button",
+                    "id": "ebb76e1c-d608-4229-93e6-173bedfadd18",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "InteractionHold",
+                    "type": "Button",
+                    "id": "db0a5df2-6dac-4462-b14c-dfdd818e3d5b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4e6679a6-e2ef-48ee-97ef-08273b8fdd8f",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f0c5aac-d607-4439-b8cf-f923c78f7646",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Hold(duration=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractionHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player",
+            "id": "609f6fc2-a95c-43fe-8085-60171f4e8ceb",
+            "actions": [
+                {
+                    "name": "PlayerMovement",
+                    "type": "Button",
+                    "id": "7eebc7fa-8866-456b-adc1-c19f04da0fce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PlayerRotation",
+                    "type": "Button",
+                    "id": "d5005f46-e914-4aba-be2d-b909be6bee31",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "99bc480d-08bf-40a6-bbd7-a6675ef52f50",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "411c02b7-8e54-4b7a-9cf9-9ea08d580a4c",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "f9889114-50a9-4b5e-b677-712fffde31d0",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "fd151b48-3964-463d-a703-54697f0311d0",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerRotation",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "4936c64e-37be-4475-aba3-0d7226ac0515",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "1a103320-01f4-44c9-a453-335e177ed6d7",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Drone",
+            "id": "53f3f592-37be-4db5-bcf6-18ee634aa7f9",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "5dd282e7-c820-4ab9-81c6-6e18543d0553",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8ec6af82-b272-4814-ae5a-ce9b9d72aba5",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Forklift",
+            "id": "06e7d121-5419-47f6-ac72-080fa875ae48",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "dc6f14c3-fac3-4eec-9137-4f18a2a50531",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b4995bb9-9497-45e8-a187-d86e307ed737",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
