@@ -7,20 +7,16 @@ using Cinemachine;
 namespace Game.Scripts.Player
 {
     [RequireComponent(typeof(CharacterController))]
-    public class Player : MonoSingleton<Player>
+    public class Player : MonoBehaviour
     {
         private CharacterController _controller;
         private Animator _anim;
-        [SerializeField]
-        private float _speed = 1.0f;
+        [SerializeField] private float _speed = 3.0f;
         private bool _playerGrounded;
-        [SerializeField]
-        private Detonator _detonator;
+        [SerializeField] private Detonator _detonator;
         private bool _canMove = true;
-        [SerializeField]
-        private CinemachineVirtualCamera _followCam;
-        [SerializeField]
-        private GameObject _model;
+        [SerializeField] private CinemachineVirtualCamera _followCam;
+        [SerializeField] private GameObject _model;
 
 
         private void OnEnable()
@@ -52,18 +48,15 @@ namespace Game.Scripts.Player
         {
             //if (_canMove == true)
                 //CalculateMovement();
-
         }
 
-        public void CalculateMovement(float move, float rotate) //float move, float rotate
+        public void CalculateMovement(float move) 
         {
+            Debug.Log("Move " + move );
             float direction = move * _speed * Time.deltaTime;
             transform.Translate(new Vector3(0, 0, direction));
-
-            transform.Rotate(transform.up, rotate);
             _anim.SetFloat("Speed", move);
-
-
+            #region Notes
             /*
             _playerGrounded = _controller.isGrounded;
             float h = Input.GetAxisRaw("Horizontal");
@@ -87,6 +80,14 @@ namespace Game.Scripts.Player
             
             _controller.Move(velocity * Time.deltaTime);                      
             */
+            #endregion
+        }
+
+        public void CalculateRotation(float rotate)
+        {
+            Debug.Log("Rotate " + rotate);
+
+            transform.Rotate(transform.up, rotate);
         }
 
         private void InteractableZone_onZoneInteractionComplete(InteractableZone zone)

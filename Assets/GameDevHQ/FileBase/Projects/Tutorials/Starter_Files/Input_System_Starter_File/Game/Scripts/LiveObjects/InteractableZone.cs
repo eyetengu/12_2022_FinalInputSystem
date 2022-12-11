@@ -7,7 +7,8 @@ using Game.Scripts.UI;
 
 namespace Game.Scripts.LiveObjects
 {
-    public class InteractableZone : MonoSingleton<InteractableZone>
+    public class InteractableZone : MonoBehaviour
+
     {
         private enum ZoneType
         {
@@ -22,22 +23,17 @@ namespace Game.Scripts.LiveObjects
             PressHold
         }
 
-        [SerializeField]
-        private ZoneType _zoneType;
-        [SerializeField]
-        private int _zoneID;
-        [SerializeField]
-        private int _requiredID;
+        [SerializeField] private ZoneType _zoneType;
+        [SerializeField] private int _zoneID;
+        [SerializeField] private int _requiredID;
         [SerializeField]
         [Tooltip("Press the (---) Key to .....")]
         private string _displayMessage;
-        [SerializeField]
-        private GameObject[] _zoneItems;
-        private bool _inZone = false;
+        [SerializeField] private GameObject[] _zoneItems;
+        [SerializeField] private bool _inZone = false;
         private bool _itemsCollected = false;
         private bool _actionPerformed = false;
-        [SerializeField]
-        private Sprite _inventoryIcon;
+        [SerializeField] private Sprite _inventoryIcon;
         //[SerializeField] private KeyCode _zoneKeyInput;
         //[SerializeField] private KeyState _keyState;
         [SerializeField] private GameObject _marker;
@@ -71,8 +67,9 @@ namespace Game.Scripts.LiveObjects
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player") && _currentZoneID > _requiredID)
+            if (other.CompareTag("Player"))// && _currentZoneID > _requiredID)
             {
+                Debug.Log("Whew! Made it!");
                 _inZone = true;
                 //Debug.Log("ZoneID: " + _currentZoneID + " " + _requiredID);
                // Debug.Log("Zone Type: " + _zoneType + " In zone: " + _inZone);
@@ -153,9 +150,7 @@ namespace Game.Scripts.LiveObjects
                 else if (Input.GetKey(_zoneKeyInput) && _keyState == KeyState.PressHold && _inHoldState == false)
                 {
                     _inHoldState = true;
-
                    
-
                     switch (_zoneType)
                     {                      
                         case ZoneType.HoldAction:
@@ -168,15 +163,13 @@ namespace Game.Scripts.LiveObjects
                 {
                     _inHoldState = false;
                     onHoldEnded?.Invoke(_zoneID);
-                }
-
-               
+                }               
             }
             */
         }
 
         #region EKey
-        public void PressedEKey()
+        public void InteractionKeyPressed()
         {
             Debug.Log("E key pressed. in zone: " + _inZone);
             if(_inZone == true)
@@ -205,7 +198,7 @@ namespace Game.Scripts.LiveObjects
             }
         }
 
-        public void PressHoldEKey()
+        public void InteractionKeyHeld()
         {
             Debug.Log("E key was held for 2 seconds");
             if (_inZone == true)
@@ -228,8 +221,9 @@ namespace Game.Scripts.LiveObjects
             }
         }
 
-        public void EKeyReleased()
+        public void InteractionKeyReleased()
         {
+            Debug.Log("E Key Released");
             _inHoldState = false;
             onHoldEnded?.Invoke(_zoneID);
         }

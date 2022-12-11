@@ -3190,6 +3190,7 @@ MonoBehaviour:
   _requiredID: 5
   _displayMessage: Break the Crate
   _zoneItems: []
+  _inZone: 0
   _inventoryIcon: {fileID: 21300000, guid: 88841726d7ebbfc46bf799ee1bfb7d3f, type: 3}
   _marker: {fileID: 1808342870}
 --- !u!1001 &198573547
@@ -7992,6 +7993,7 @@ MonoBehaviour:
   _displayMessage: Place C4
   _zoneItems:
   - {fileID: 758722189}
+  _inZone: 0
   _inventoryIcon: {fileID: 21300000, guid: 8e46bcb2f14d4d144b9e4a395b47efa2, type: 3}
   _marker: {fileID: 605505802}
 --- !u!4 &482471386 stripped
@@ -9851,6 +9853,7 @@ MonoBehaviour:
   _requiredID: 1
   _displayMessage: Denotate C4
   _zoneItems: []
+  _inZone: 0
   _inventoryIcon: {fileID: 21300000, guid: 88841726d7ebbfc46bf799ee1bfb7d3f, type: 3}
   _marker: {fileID: 1331263896}
 --- !u!1001 &565131287
@@ -14343,6 +14346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 359860633}
+  interactableZone: {fileID: 1277958656}
 --- !u!4 &835823257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 62b1fb061072740b38667cd3e45b278f, type: 3}
@@ -16592,6 +16596,7 @@ MonoBehaviour:
   _requiredID: 6
   _displayMessage: Reset
   _zoneItems: []
+  _inZone: 0
   _inventoryIcon: {fileID: 0}
   _marker: {fileID: 1578479318}
 --- !u!1 &967188505
@@ -16720,7 +16725,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972744894}
-  m_LocalRotation: {x: 0.22150686, y: 0.04670523, z: -0.01062189, w: 0.9739818}
+  m_LocalRotation: {x: 0.22150688, y: 0.046705622, z: -0.010621982, w: 0.9739818}
   m_LocalPosition: {x: -0.48177326, y: 4.5286655, z: -4.833789}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22759,6 +22764,7 @@ MonoBehaviour:
   _zoneItems:
   - {fileID: 474256985}
   - {fileID: 908574055}
+  _inZone: 0
   _inventoryIcon: {fileID: 21300000, guid: 81dff3a1ca824714aae965897edd2351, type: 3}
   _marker: {fileID: 1583429342}
 --- !u!1001 &1178759240
@@ -23920,6 +23926,7 @@ MonoBehaviour:
   _requiredID: 4
   _displayMessage: Drive Forklift
   _zoneItems: []
+  _inZone: 0
   _inventoryIcon: {fileID: 21300000, guid: 88841726d7ebbfc46bf799ee1bfb7d3f, type: 3}
   _marker: {fileID: 1840441541}
 --- !u!4 &1277958657 stripped
@@ -32440,6 +32447,7 @@ MonoBehaviour:
   _requiredID: 3
   _displayMessage: Fly Drone
   _zoneItems: []
+  _inZone: 0
   _inventoryIcon: {fileID: 0}
   _marker: {fileID: 1041737524}
 --- !u!1001 &1810757429
@@ -35768,6 +35776,7 @@ MonoBehaviour:
   _requiredID: 2
   _displayMessage: Hack Cameras
   _zoneItems: []
+  _inZone: 0
   _inventoryIcon: {fileID: 0}
   _marker: {fileID: 55150249}
 --- !u!4 &2030128479 stripped

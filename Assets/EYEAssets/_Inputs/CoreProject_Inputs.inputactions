@@ -40,7 +40,7 @@
                     "name": "",
                     "id": "7f0c5aac-d607-4439-b8cf-f923c78f7646",
                     "path": "<Keyboard>/e",
-                    "interactions": "Hold(duration=2)",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "InteractionHold",
@@ -146,9 +146,27 @@
             "id": "53f3f592-37be-4db5-bcf6-18ee634aa7f9",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "MoveDrone",
                     "type": "Button",
                     "id": "5dd282e7-c820-4ab9-81c6-6e18543d0553",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RotateDrone",
+                    "type": "Button",
+                    "id": "37ac01af-de90-48ec-ade8-12e51e95888e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Elevation",
+                    "type": "Button",
+                    "id": "bb070c75-c5d3-40c3-985d-60a4b830fccf",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -157,15 +175,103 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "8ec6af82-b272-4814-ae5a-ce9b9d72aba5",
-                    "path": "",
+                    "name": "1D Axis",
+                    "id": "e48f1edc-6de7-4afd-ba51-99d502660350",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
+                    "action": "Elevation",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "8882c48c-9a27-49be-b3a0-16a69f7112b2",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Elevation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "e325b37f-07e4-499a-974a-f74f9544745b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Elevation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "2e39ef12-94cb-4fa5-afa9-566f940216fb",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveDrone",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "59af06a3-f030-4742-a03b-43822398f8c0",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveDrone",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "c80c0566-7e97-436b-8b7e-bd0e618d2f36",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveDrone",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "a210388a-696f-436a-9e88-0178908ab4ae",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDrone",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "65f00c14-c3db-4c65-b0f9-dc39561ff5db",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDrone",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "d6d92300-e057-420e-a534-e68f8358ee31",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDrone",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
@@ -174,9 +280,18 @@
             "id": "06e7d121-5419-47f6-ac72-080fa875ae48",
             "actions": [
                 {
-                    "name": "New action",
-                    "type": "Button",
+                    "name": "MoveForklift",
+                    "type": "Value",
                     "id": "dc6f14c3-fac3-4eec-9137-4f18a2a50531",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "RaiseLowerForks",
+                    "type": "Button",
+                    "id": "81ee6c8b-9fb1-429b-866b-6e577738e2a6",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -185,15 +300,92 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "b4995bb9-9497-45e8-a187-d86e307ed737",
-                    "path": "",
+                    "name": "2D Vector",
+                    "id": "6af8d190-08f2-4adb-ab95-7ba137350782",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
+                    "action": "MoveForklift",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "18225e03-c928-49b7-b2f6-9b1fbade09cb",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveForklift",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "f94231c6-fec6-47a5-9f28-31ef177e4abc",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveForklift",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "6fb42d33-6f65-4ba3-a3a1-18bcc10f4b1f",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveForklift",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "63d6ac3c-5cbf-429a-b7d0-4dd230c22d60",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveForklift",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "50a2a8e2-fcb0-4371-8e3d-35f87fdb778e",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RaiseLowerForks",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "76df1305-02ce-47d8-90aa-d1960b20b79c",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RaiseLowerForks",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "b1e97ef2-9848-46d3-aef6-d979769ab1cf",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RaiseLowerForks",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
